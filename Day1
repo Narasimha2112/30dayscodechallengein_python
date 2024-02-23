@@ -1,0 +1,27 @@
+#Day1
+
+"""
+Write a program that takes an integer `n` as input and performs the following actions:
+- If `n` is a multiple of 3, print 'FrontEnd'.
+- If `n` is a multiple of 5, print 'DataBase'.
+- If `n` is a multiple of both 3 and 5, print 'FULLSTACK'.
+- Otherwise, print the number itself.
+
+Example:
+Input: 5 
+Output: ACAD
+
+Your Task:
+Write a program to solve the above problem.
+"""
+
+n=int(input("Enter a number: "))
+
+if(n%3==0 and n%5==0):
+    print("FullStack")
+elif(n%3==0):
+    print("FrontEnd")
+elif(n%5==0):
+    print("DataBase")
+else:
+    print(n)
