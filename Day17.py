@@ -16,19 +16,20 @@ Develop a program to print the sum of all subarrays whose sum is equal to k.
 """
 
 
-arr1 = [5, 2, 3, 4, 1]
+def sum_subarray(arr):
+    return sum(arr)
 
-print("array",arr1)
-result = []
-target = int(input("Enter the target sum: "))
+def main():
+    arr1 = [5, 2, 3, 4, 1]
+    result = []
+    target = 10
 
+    for i in range(len(arr1)):
+        for j in range(i, len(arr1)):
+            if target == sum_subarray(arr1[i:j+1]):
+                result.append(arr1[i:j+1])
 
+    print(result)
 
-for i in range(len(arr1)):
-    for j in range(i, len(arr1)):
-        if target == sum_subarray(arr1[i:j+1]):
-            result.append(arr1[i:j+1])
-
-
-print("Subarrays with sum ",target,":",result)
-
+if __name__ == "__main__":
+    main()
